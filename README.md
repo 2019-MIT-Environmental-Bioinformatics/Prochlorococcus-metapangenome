@@ -61,10 +61,12 @@ We then combined all the genome sequences into a single file...
     awk '{ if (substr($1,1,3) == ">CA") print ">" substr($10,1,10) substr($10,16,length($10)-1); else print $0}' all-genome-seqs.fa > all-genome-seqs-fixed.fa
 
 For example, a defline in the *PROCHLOROCOCCUS-FASTA-FILES/CONTIGS-FOR-ISOLATES.fa* file is:
-  >AS9601-00000001, where "AS9601" represents the name of the isolate, and "00000001" represents the contig within that genome. The file *CONTIGS-FOR-SAGs.fa* follows the same format. 
+
+">AS9601-00000001"; where "AS9601" represents the name of the isolate, and "00000001" represents the contig within that genome. The file *CONTIGS-FOR-SAGs.fa* follows the same format. 
   
 However, the deflines in the new SAGs we downloaded are formated as follows:
-  >CACAYO010000001.1 uncultured Prochlorococcus sp. isolate AG-349-G23 genome assembly, contig: AG-349-G23_NODE_1, whole genome shotgun sequence
+ 
+">CACAYO010000001.1 uncultured Prochlorococcus sp. isolate AG-349-G23 genome assembly, contig: AG-349-G23_NODE_1, whole genome shotgun sequence"
 The awk command above extracts the genome (AG-349-G23) and contig number (1) from the defline and formats it in a way that is consistent with the deflines given above. 
 
 Removed non-Atlantic genomes from TARA ftp file 
