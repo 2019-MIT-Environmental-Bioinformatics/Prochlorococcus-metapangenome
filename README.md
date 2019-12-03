@@ -91,6 +91,22 @@ Before generating the database, we using the following command to edit the defli
     sbatch scripts/anvi-db-cogs-hmms.sh 
 
 
+# Mapping metagenomic reads to the contigs databases
+
+We began by building a bowtie database from the file containing all the genome sequences:
+
+    bowtie2-build data/PROCHLOROCOCCUS-FASTA-FILES/seqs-fixed.fa databases/prochlorococcus-bowtie
+
+Then used the script bowtie-map.sh to map each of the atlantic metagenomes to the bowtie database:
+
+    sbatch scripts/bowtie-map.sh
+    
+Then used the bam files from the bowtie output to create Anvi'o profile databases with the script anvi-profile.sh
+
+    sbatch scripts/anvi-profile.sh
+
+
+
 # Contribution Statement ALG
 
 ALG generated the anvi’o contigs database and assigned functions to genes using HMMer and the NCBI COGs database, recruited metagenome reads to contigs, and profiled read recruitment to generate a merged profile database and anvi’o collection. ALG computed and visualized the Prochlorococcus pangenome.
