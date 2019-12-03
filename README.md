@@ -91,7 +91,11 @@ Before generating the database, we using the following command to edit the defli
     sbatch scripts/anvi-db-cogs-hmms.sh 
 
 
+# Contribution Statement ALG
+
+ALG generated the anvi’o contigs database and assigned functions to genes using HMMer and the NCBI COGs database, recruited metagenome reads to contigs, and profiled read recruitment to generate a merged profile database and anvi’o collection. ALG computed and visualized the Prochlorococcus pangenome.
 
 
+# Contribution Statement IZ
 
-
+IZ downloaded required FASTA files for isolates and single-amplified genomes (SAGs) and SAGs provided by Dr. Maria Pachiadaki. IZ performed quality filtering on Atlantic Ocean TARA metagenomes and associated metagenomes with sample metadata. IZ classified genes as environmental core (ECG) or environmental accessory (EAG) and visualized this distribution across metagenomes. 
