@@ -111,6 +111,14 @@ Before generating the database, we using the following command to edit the defli
  
     sbatch scripts/anvi-db-cogs-hmms.sh 
 
+# Mapping metagenome reads:
+We began by building a bowtie database from the fasta file containing each isolate and SAG genome:
+
+    bowtie2-build data/PROCHLOROCOCCUS-FASTA-FILES/all-genome-seqs-fixed.fa databases/prochlorococcus-bowtie
+    
+Then used bowtie to map the metagenomic reads to the *Prochlorococcus* genomes using the script bowtie-map.sh. This script also converts the SAM output to a BAM file, then sort and index it. 
+
+    sbatch script/bowtie-map.sh
 
 # Linking pangenome to environment:
 
