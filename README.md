@@ -128,6 +128,11 @@ Then used bowtie to map the metagenomic reads to the *Prochlorococcus* genomes u
  
     anvi-merge databases/A*/PROFILE.db -o databases/Prochlorococcus-merged -c databases/Prochlorococcus-CONTIGS.db
 
+# Collection file
+The purpose of a collection file in Anvi'o is to tell the program which contigs correspond to which genome. Prior to this step, the contigs database was treated as one large group of contigs, as opposed to many individual genomes. We used the Jupyter notebook Make-Collections-File.ipynb to create a file containing each of the splits stored in the Anvi'o database and the corresponding genome from which that split originated. We could not use the provided file due to the addition of new genomes. 
+
+
+
 # Linking pangenome to environment:
 
 To 
