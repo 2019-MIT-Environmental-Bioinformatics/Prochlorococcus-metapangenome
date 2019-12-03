@@ -1,8 +1,8 @@
 # Prochlorococcus-metapangenome
 Annika Gomez and Irene Zhang
 
-Delmont, T. O., & Eren, A. M. (2018). Linking pangenomes and metagenomes: the \ 
-Prochlorococcus metapangenome. PeerJ, 6, e4320. doi:10.7717/peerj.4320 \
+Delmont, T. O., & Eren, A. M. (2018). Linking pangenomes and metagenomes: the 
+Prochlorococcus metapangenome. PeerJ, 6, e4320. doi:10.7717/peerj.4320 
 
 We propose to use the 31 isolate genomes for Prochlorococcus that Delmont and Eren \
 downloaded from the NCBI database (totaling 55 MB, available at  \
@@ -14,7 +14,7 @@ genomes. We will distinguish between environmental core genes and environmental 
 genes for each genome using anvi’o based upon a coverage value threshold (25%) for each \
 gene across all genomes. From this we can compute the Prochlorococcus pangenome in anvi’o. \
 We will visualize the results of our analysis and recreate Figures 1-4 using anvi’o \
-(http://merenlab.org/software/anvio/) and the ggplot2 library for R if necessary. \
+(http://merenlab.org/software/anvio/) and the ggplot2 library for R if necessary. 
 
 # Anvi'o installation
 
