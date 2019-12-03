@@ -17,6 +17,8 @@ We will visualize the results of our analysis and recreate Figures 1-4 using anv
 (http://merenlab.org/software/anvio/) and the ggplot2 library for R if necessary. \
 
 Download Prochlorococcus fasta files: \
+
+curl -L https://ndownloader.figshare.com/files/9416614 -o PROCHLOROCOCCUS-FASTA-FILES.tar.gz
 tar -xzvf PROCHLOROCOCCUS-FASTA-FILES.tar.gz
 
 Removed non-Atlantic genomes from TARA ftp file \
