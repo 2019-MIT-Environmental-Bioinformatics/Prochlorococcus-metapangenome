@@ -44,6 +44,9 @@ Download Prochlorococcus isolate genome & SAG fasta files:
 
     curl -L https://ndownloader.figshare.com/files/9416614 -o PROCHLOROCOCCUS-FASTA-FILES.tar.gz
     tar -xzvf PROCHLOROCOCCUS-FASTA-FILES.tar.gz
+   
+We used the TARA metagenomes available on Poseidon (provided by Maria) to conserve space in our directory.
+TARA metagenomes were available at : /vortexfs1/omics/data/tara/PRJEB1787
 
 The file PROCHLOROCOCCUS-FASTA-FILES contains: *CONTIGS-FOR-ISOLATES.fa* and *CONTIGS-FOR-SAGs.fa*
 To combine these into a single fasta file, run the following command:
@@ -74,7 +77,29 @@ However, the deflines in the new SAGs we downloaded are formated as follows:
 ">CACAYO010000001.1 uncultured Prochlorococcus sp. isolate AG-349-G23 genome assembly, contig: AG-349-G23_NODE_1, whole genome shotgun sequence"
 The awk command above extracts the genome (AG-349-G23) and contig number (1) from the defline and formats it in a way that is consistent with the deflines given above. 
 
-Removed non-Atlantic genomes from TARA ftp file 
+# Metagenome Quality Filtering
+
+Download file listing 93 Prochlorococcus metagenomes:
+
+    wget http://merenlab.org/data/tara-oceans-mags/files/sets.txt
+    wget http://merenlab.org/data/tara-oceans-mags/files/samples.txt
+
+We filtered for Atlantic metagenomes only from the samples.txt file, which associates reads with sample IDs, and saved this
+files as Atlantic_samples.txt.
+
+To perform quality filtering on the metagenomes (removing noise), we used the illumina-utils library. The iu-gen-configs command generates config files (.ini file extension) which are used in the downstream steps to associate raw reads with the correct sample IDs and locations. 
+    
+    iu-gen-configs Atlantic_samples.txt
+
+For the actual quality filtering, we made the slurm script quality-filtering.txt. Since quality filtering requires significant time to run and the maximum time we could request on Poseidon was 20 hours, we had to rerun this script several times to perform QC on each metagenome. In addition, several metagenomes had multiple fasta files associated with each read. As each fasta file in the TARA directory was located in its own subdirectory, and the .ini config files cannot read from multiple directories, we had to copy these fasta files into our home directory for this step to work. 
+
+The .STATS file for quality-filtering.txt contains the following information for each metagenome:
+
+    cat ANW_146_05M-STATS.txt 
+    number of pairs analyzed : 169471567
+    total pairs passed       : 159790673 (%94.29 of all pairs)
+    
+    
 
 
 
@@ -91,25 +116,6 @@ Before generating the database, we using the following command to edit the defli
     sbatch scripts/anvi-db-cogs-hmms.sh 
 
 
-# Mapping metagenomic reads to the contigs databases
-
-We began by building a bowtie database from the file containing all the genome sequences:
-
-    bowtie2-build data/PROCHLOROCOCCUS-FASTA-FILES/seqs-fixed.fa databases/prochlorococcus-bowtie
-
-Then used the script bowtie-map.sh to map each of the atlantic metagenomes to the bowtie database:
-
-    sbatch scripts/bowtie-map.sh
-    
-Then used the bam files from the bowtie output to create Anvi'o profile databases with the script anvi-profile.sh
-
-    sbatch scripts/anvi-profile.sh
-
-We then merged the profile databased for each metagenome into a single database:
-
-    anvi-merge databases/A*/PROFILE.db -o databases/Prochlorococcus-merged -c databases/Prochlorococcus-CONTIGS.db
- 
- 
 # Contribution Statement ALG
 
 ALG generated the anvi’o contigs database and assigned functions to genes using HMMer and the NCBI COGs database, recruited metagenome reads to contigs, and profiled read recruitment to generate a merged profile database and anvi’o collection. ALG computed and visualized the Prochlorococcus pangenome.
