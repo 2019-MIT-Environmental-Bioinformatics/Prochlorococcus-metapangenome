@@ -16,12 +16,17 @@ gene across all genomes. From this we can compute the Prochlorococcus pangenome 
 We will visualize the results of our analysis and recreate Figures 1-4 using anvi’o \
 (http://merenlab.org/software/anvio/) and the ggplot2 library for R if necessary. \
 
-Download Prochlorococcus fasta files: \
+
+# Downloading data
+
+Download Prochlorococcus isolate genome & SAG fasta files: 
 
 curl -L https://ndownloader.figshare.com/files/9416614 -o PROCHLOROCOCCUS-FASTA-FILES.tar.gz
 tar -xzvf PROCHLOROCOCCUS-FASTA-FILES.tar.gz
 
-Removed non-Atlantic genomes from TARA ftp file \
+The file PROCHLOROCOCCUS-FASTA-FILES contains: *CONTIGS-FOR-ISOLATES.fa* and *CONTIGS-FOR-SAGs.fa*
+
+Removed non-Atlantic genomes from TARA ftp file 
 
 
 
