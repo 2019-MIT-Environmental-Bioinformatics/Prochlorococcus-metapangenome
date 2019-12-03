@@ -105,8 +105,11 @@ Then used the bam files from the bowtie output to create Anvi'o profile database
 
     sbatch scripts/anvi-profile.sh
 
+We then merged the profile databased for each metagenome into a single database:
 
-
+    anvi-merge databases/A*/PROFILE.db -o databases/Prochlorococcus-merged -c databases/Prochlorococcus-CONTIGS.db
+ 
+ 
 # Contribution Statement ALG
 
 ALG generated the anvi’o contigs database and assigned functions to genes using HMMer and the NCBI COGs database, recruited metagenome reads to contigs, and profiled read recruitment to generate a merged profile database and anvi’o collection. ALG computed and visualized the Prochlorococcus pangenome.
