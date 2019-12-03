@@ -101,7 +101,7 @@ The .STATS file for quality-filtering.txt contains the following information for
 
 
 # Creating Anvi'o contigs database:
-    - An anvio contigs database stores the sequence information from each of the inputted contigs, predicts ORFs, and adds information generated from searching these contigs against a reference databases, using HMMs and BLAST, to uncover function of genes populating the database
+- An anvio contigs database stores the sequence information from each of the inputted contigs, predicts ORFs, and adds information generated from searching these contigs against a reference databases, using HMMs and BLAST, to uncover function of genes populating the database
     
 Before generating the database, we using the following command to edit the deflines in the fasta files to anvi'o's specifications:
 
@@ -140,6 +140,12 @@ We used the following command to read the information in the collection file int
 To begin the pangenome analysis, we needed to create an internal-genomes.txt file. The process for creating this file can be found in the jupyter notebook Make-Collections-File.ipynb. We repeated this process twice, once including all the isolate and SAG genomes, and once only including the isolate genomes. The figures presented in this analysis represent the repeated pangenome analysis with only the isolate genomes, as this is what was done in the paper. The script pangenome.sh was used to run the pangenome analysis.
 
     sbatch scripts/pangenome.sh
+ 
+ We visualized the pangenome using the following command:
+ 
+    anvi-display-pan -p databases/Prochlorococcus-ISOLATE-PAN/Prochlorococcus-ISOLATE-PAN-PAN.db -g databases/Prochlorococcus-ISOLATE-PAN-GENOMES.db --server-only
+ 
+The server-only flag instructs anvi'o to load the information into the server without opening a browser. We were then able to launch the interactive mode by shh-ing into the correct local host, using the same procedure as done in class to launch jupyter notebooks from the cluster. 
 
 # Linking pangenome to environment:
 
