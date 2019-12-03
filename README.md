@@ -98,10 +98,6 @@ The .STATS file for quality-filtering.txt contains the following information for
     cat ANW_146_05M-STATS.txt 
     number of pairs analyzed : 169471567
     total pairs passed       : 159790673 (%94.29 of all pairs)
-    
-    
-
-
 
 
 # Creating Anvi'o contigs database:
@@ -114,6 +110,13 @@ Before generating the database, we using the following command to edit the defli
  We then used the *anvi-db-cogs-hmms.sh* script to generate a contigs database and populate it with information from an HMM and BLAST search.
  
     sbatch scripts/anvi-db-cogs-hmms.sh 
+
+
+# Linking pangenome to environment:
+
+To 
+
+anvi-meta-pan-genome -p Prochlorococcus-ISOLATE-PAN/Prochloroccocus-ISOLATE-PAN-PAN.db -g Prochlorococcus-ISOLATE-PAN-GENOMES.db -i ../data/internal-genomes.txt --fraction-of-median-coverage 0.25 
 
 
 # Contribution Statement ALG
