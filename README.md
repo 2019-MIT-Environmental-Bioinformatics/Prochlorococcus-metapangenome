@@ -118,7 +118,15 @@ We began by building a bowtie database from the fasta file containing each isola
     
 Then used bowtie to map the metagenomic reads to the *Prochlorococcus* genomes using the script bowtie-map.sh. This script also converts the SAM output to a BAM file, then sort and index it. 
 
-    sbatch script/bowtie-map.sh
+    sbatch scripts/bowtie-map.sh
+    
+ The bowtie outputs were then used to create Anvi'o profiles for each of the metagenomic samples using the anvi-profile.sh script.
+    
+    sbatch scripts/anvi-profile.sh
+ 
+ The profiles were then merged into a single profile using the following command:
+ 
+    anvi-merge databases/A*/PROFILE.db -o databases/Prochlorococcus-merged -c databases/Prochlorococcus-CONTIGS.db
 
 # Linking pangenome to environment:
 
