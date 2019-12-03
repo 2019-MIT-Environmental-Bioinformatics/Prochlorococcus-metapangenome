@@ -33,6 +33,11 @@ And saved the environment using:
 
     conda env export > anvio-6.1.yml
 
+After attempting to run a later step, we realized that another necessary part of the installation was setting up the NCBI COG database: 
+    
+    anvi-setup-ncbi-cogs
+
+
 # Downloading data
 
 Download Prochlorococcus isolate genome & SAG fasta files: 
