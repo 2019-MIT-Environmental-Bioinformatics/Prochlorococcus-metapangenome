@@ -1,0 +1,15 @@
+#! /bin/bash
+
+#SBATCH --partition=compute
+#SBATCH --job-name=anvio-Zhang
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=izhang@mit.edu
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --nodes=1
+#SBATCH --mem=50000
+#SBATCH --time=20:00:00
+#SBATCH --output=anvi-meta-pan-genome.log
+#export OMP_NUM_THREADS=1
+
+anvi-meta-pan-genome -p Prochlorococcus-ISOLATE-PAN/Prochloroccocus-ISOLATE-PAN-PAN.db -g Prochlorococcus-ISOLATE-PAN-GENOMES.db -i ../data/internal-genomes.txt --fraction-of-median-coverage 0.25 
