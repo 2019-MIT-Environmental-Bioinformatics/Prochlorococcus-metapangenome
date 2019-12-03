@@ -147,6 +147,12 @@ To begin the pangenome analysis, we needed to create an internal-genomes.txt fil
  
 The server-only flag instructs anvi'o to load the information into the server without opening a browser. We were then able to launch the interactive mode by shh-ing into the correct local host, using the same procedure as done in class to launch jupyter notebooks from the cluster. 
 
+# Generating summary files:
+
+We summarized the results of the profiling of the contigs database (mapping metagenomic reads to isolate genomes and SAGs) using the following command:
+
+    anvi-summarize -c databases/Prochlorococcus-CONTIGS.db -p databases/Prochlorococcus-MERGED/PROFILE.db -C Genomes --init-gene-coverages -o output/Prochlorococcus-SUMMARY
+
 # Linking pangenome to environment:
 
 To 
