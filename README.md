@@ -137,7 +137,9 @@ We used the following command to read the information in the collection file int
 
 # Pangenome analysis:
 
-To begin the pangenome analysis, we needed to create an internal-genomes.txt file. The process for creating this file can be found in 
+To begin the pangenome analysis, we needed to create an internal-genomes.txt file. The process for creating this file can be found in the jupyter notebook Make-Collections-File.ipynb. We repeated this process twice, once including all the isolate and SAG genomes, and once only including the isolate genomes. The figures presented in this analysis represent the repeated pangenome analysis with only the isolate genomes, as this is what was done in the paper. The script pangenome.sh was used to run the pangenome analysis.
+
+    sbatch scripts/pangenome.sh
 
 # Linking pangenome to environment:
 
