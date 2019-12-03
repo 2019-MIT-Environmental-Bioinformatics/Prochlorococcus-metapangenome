@@ -16,6 +16,9 @@ gene across all genomes. From this we can compute the Prochlorococcus pangenome 
 We will visualize the results of our analysis and recreate Figures 1-4 using anvi’o \
 (http://merenlab.org/software/anvio/) and the ggplot2 library for R if necessary. \
 
+# Anvi'o installation
+
+
 
 # Downloading data
 
@@ -25,6 +28,26 @@ curl -L https://ndownloader.figshare.com/files/9416614 -o PROCHLOROCOCCUS-FASTA-
 tar -xzvf PROCHLOROCOCCUS-FASTA-FILES.tar.gz
 
 The file PROCHLOROCOCCUS-FASTA-FILES contains: *CONTIGS-FOR-ISOLATES.fa* and *CONTIGS-FOR-SAGs.fa*
+To combine these into a single fasta file, run the following command:
+
+cat CONTIGS-FOR-ISOLATES.fa CONTIGS-FOR-SAGs.fa > Prochlorococcus-genomes.fa
+
+We also included in the analysis 5 new SAGs (courtesy of Maria), which were downloaded into the folder *Maria_SAGs*. To unzip each of these files: 
+
+for fasta in Maria_SAGs/
+do
+gunzip $fasta
+done 
+
+We then combined all the genome sequences into a single file...
+
+cat Maria_SAGs/*.fna Prochlorococcus-genomes.fa >> all-genome-seqs.fa
+
+...And edited the deflines of the new SAGs to be consistent with the ones used in the paper:
+
+awk '{ if (substr($1,1,3) == ">CA") print ">" substr($10,1,10) substr($10,16,length($10)-1); else print $0}' all-genome-seqs.fa > all-genome-seqs-fixed.fa
+
+
 
 Removed non-Atlantic genomes from TARA ftp file 
 
