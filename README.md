@@ -152,6 +152,10 @@ The server-only flag instructs anvi'o to load the information into the server wi
 We summarized the results of the profiling of the contigs database (mapping metagenomic reads to isolate genomes and SAGs) using the following command:
 
     anvi-summarize -c databases/Prochlorococcus-CONTIGS.db -p databases/Prochlorococcus-MERGED/PROFILE.db -C Genomes --init-gene-coverages -o output/Prochlorococcus-SUMMARY
+    
+We summarized the results of the pangenome analysis with the following command:
+
+    anvi-summarize -p databases/Prochlorococcus-ISOLATE-PAN/Prochlorococcus-ISOLATE-PAN-PAN.db -g databases/Prochlorococcus-ISOLATE-PAN-GENOMES.db -C default -o output/Prochlorococcus-ISOLATE-PAN-SUMMARY
 
 # Linking pangenome to environment:
 
