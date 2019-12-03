@@ -16,10 +16,69 @@ gene across all genomes. From this we can compute the Prochlorococcus pangenome 
 We will visualize the results of our analysis and recreate Figures 1-4 using anvi’o \
 (http://merenlab.org/software/anvio/) and the ggplot2 library for R if necessary. \
 
-Download Prochlorococcus fasta files: \
-tar -xzvf PROCHLOROCOCCUS-FASTA-FILES.tar.gz
+# Anvi'o installation
 
-Removed non-Atlantic genomes from TARA ftp file \
+We installed anvi'o 6.1 using conda according to the instructions found here: http://merenlab.org/2016/06/26/installation-v2/
+
+    conda create -n anvio-6.1 python=3.6
+    conda activate anvio-6.1
+    conda install -y -c conda-forge -c bioconda anvio=6.1
+    conda install -y diamond=0.9.14
+
+We checked the installation using:
+
+    anvi-self-test --suite mini
+
+And saved the environment using:
+
+    conda env export > anvio-6.1.yml
+
+After attempting to run a later step, we realized that another necessary part of the installation was setting up the NCBI COG database: 
+    
+    anvi-setup-ncbi-cogs
+
+
+# Downloading data
+
+Download Prochlorococcus isolate genome & SAG fasta files: 
+
+    curl -L https://ndownloader.figshare.com/files/9416614 -o PROCHLOROCOCCUS-FASTA-FILES.tar.gz
+    tar -xzvf PROCHLOROCOCCUS-FASTA-FILES.tar.gz
+
+The file PROCHLOROCOCCUS-FASTA-FILES contains: *CONTIGS-FOR-ISOLATES.fa* and *CONTIGS-FOR-SAGs.fa*
+To combine these into a single fasta file, run the following command:
+
+    cat CONTIGS-FOR-ISOLATES.fa CONTIGS-FOR-SAGs.fa > Prochlorococcus-genomes.fa
+
+We also included in the analysis 5 new SAGs (courtesy of Maria), which were downloaded into the folder *Maria_SAGs*. To unzip each of these files: 
+
+    for fasta in Maria_SAGs/
+    do
+    gunzip $fasta
+    done 
+
+We then combined all the genome sequences into a single file...
+
+    cat Maria_SAGs/*.fna Prochlorococcus-genomes.fa >> all-genome-seqs.fa
+
+...And edited the deflines of the new SAGs to be consistent with the ones used in the paper:
+
+    awk '{ if (substr($1,1,3) == ">CA") print ">" substr($10,1,10) substr($10,16,length($10)-1); else print $0}' all-genome-seqs.fa > all-genome-seqs-fixed.fa
+
+For example, a defline in the *PROCHLOROCOCCUS-FASTA-FILES/CONTIGS-FOR-ISOLATES.fa* file is:
+
+">AS9601-00000001"; where "AS9601" represents the name of the isolate, and "00000001" represents the contig within that genome. The file *CONTIGS-FOR-SAGs.fa* follows the same format. 
+  
+However, the deflines in the new SAGs we downloaded are formated as follows:
+ 
+">CACAYO010000001.1 uncultured Prochlorococcus sp. isolate AG-349-G23 genome assembly, contig: AG-349-G23_NODE_1, whole genome shotgun sequence"
+The awk command above extracts the genome (AG-349-G23) and contig number (1) from the defline and formats it in a way that is consistent with the deflines given above. 
+
+Removed non-Atlantic genomes from TARA ftp file 
+
+
+
+
 
 
 
