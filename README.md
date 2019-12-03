@@ -79,6 +79,17 @@ Removed non-Atlantic genomes from TARA ftp file
 
 
 
+# Creating Anvi'o contigs database:
+    - An anvio contigs database stores the sequence information from each of the inputted contigs, predicts ORFs, and adds information generated from searching these contigs against a reference databases, using HMMs and BLAST, to uncover function of genes populating the database
+    
+Before generating the database, we using the following command to edit the deflines in the fasta files to anvi'o's specifications:
+
+    anvi-script-reformat-fasta data/PROCHLOROCOCCUS-FASTA-FILES/all-genome-seqs-fixed.fa -o seqs-fixed.fa -l 0 --simplify-names --report-file report-deflines.tab
+ 
+ We then used the *anvi-db-cogs-hmms.sh* script to generate a contigs database and populate it with information from an HMM and BLAST search.
+ 
+    sbatch scripts/anvi-db-cogs-hmms.sh 
+
 
 
 
