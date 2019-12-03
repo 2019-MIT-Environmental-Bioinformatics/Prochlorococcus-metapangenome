@@ -134,7 +134,10 @@ The purpose of a collection file in Anvi'o is to tell the program which contigs 
 We used the following command to read the information in the collection file into the contigs database:
 
     anvi-import-collection final_Prochlorococcus-GENOME-COLLECTION.txt -c databases/Prochlorococcus-CONTIGS.db -p databases/Prochlorococcus-MERGED/PROFILE.db -C Genomes
-    
+
+# Pangenome analysis:
+
+To begin the pangenome analysis, we needed to create an internal-genomes.txt file. The process for creating this file can be found in 
 
 # Linking pangenome to environment:
 
