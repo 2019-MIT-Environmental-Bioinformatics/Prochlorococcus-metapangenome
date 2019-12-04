@@ -251,6 +251,18 @@ To visualize Figure 3 for EQPAC1 and MIT9314:
     anvi-interactive -p empty.db -d MIT9314-GENE-COVs.txt -A MIT9314-ENV-DETECTION.txt --title "Prochlorococcus MIT9314 genes across TARA Oceans Project metagenomes" --server-only --manual
 
     anvi-interactive -p empty.db -d EQPAC1-GENE-COVs.txt -A EQPAC1-ENV-DETECTION.txt --title "Prochlorococcus EQPAC1 genes across TARA Oceans Project metagenomes" --server-only --manual
+    
+As anvi'o refused to attach our PROFILE.db file or PAN.db file to this command, we created the empty file empty.db. When PROFILE.db is attached, anvi-interactive raises multiple ConfigErrors as this profile does not have item orders. When anvi-display-pan is run using the files for EQPAC1 and MIT9314, no errors are raised but the resulting figure does not contain information for EQPAC1 and MIT9314 but is identical to our Figure 2.
+
+As we are running anvi-interactive on Poseidon, to visualize the server run this command on a local machine. The localhost port number is provided by anvi'o when run with the --server-only flag, and we used the Poseidon node which we are logged onto:
+
+     ssh -N -f -L localhost:8082:localhost:8082 username@poseidon-l1.whoi.edu
+
+Then, open a browser window and navigate to the localhost (http://localhost:8082/ in this case).
+
+To exit out of the server, we kill it using on the local machine:
+    
+    lsof -ti:8082 | xargs kill -9ed
 
 
 # Contribution Statement ALG
