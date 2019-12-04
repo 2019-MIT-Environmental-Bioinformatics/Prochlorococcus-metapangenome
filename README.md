@@ -7,27 +7,46 @@ We propose to use the 31 isolate genomes for Prochlorococcus that Delmont and Er
 
 # Repository Structure and Files
 
-    data/ : contains raw data for metagenomes and isolates, quality-filtered fastqs, text files required for associating reads to metagenomes, config files for quality filtering, and any files required to clean and assemble data for anvi'o 
+    data/ : contains raw data for metagenomes and isolates, quality-filtered fastqs, text files required for associating reads to metagenomes, config files for quality filtering, and any files required to clean and assemble data for anvi'o
+    
         Atlantic_Sample_IDs.txt : list of all TARA fastq files associated with Atlantic Ocean metagenomes
+        
         Atlantic_samples.txt : associates fasta filenames with metagenome reads 1 and 2 for Atlantic Ocean TARA metagenomes
+        
         ftp-links-for-raw-data-files.txt: ftp links for Atlantic Ocean TARA metagenomes, we tried to use this to download TARA data prior to receiving them from Maria 
+        
         PROCHLOROCOCCUS-FASTA-FILES.tar.gz : zipped Prochlorococcus fasta files downloaded from Meren's blog, same ones as used in their analysis
+        
         internal-genomes.txt : 
-        samples.txt : original list associating fasta filenames with metagenome reads for TARA, which we filtered to get Atlantic_samples.txt 
-        sets.txt: list of locations only (ANW, ANE, etc.) 
-        config-files/ : directory for all config files generated during quality filtering metagenomes 
-            all-config-files/ : all config .ini files for TARA 
-            atlantic-config-files/ : only Atlantic Ocean config files 
-        PROCHLOROCOCCUS-FASTA-FILES/ : directory containing unzipped Prochlorococcus fasta files and SAGs 
-            Maria_SAGs : directory containing SAGs provided by Maria 
-        quality-filtered-fastqs/ : quality-filtered Atlantic Ocean TARA fastq files associated with metagenomes 
-            *QUALITY-PASSED* files are outputs from quality filtering step, denoised and cleaned fastqs 
+        
+        samples.txt : original list associating fasta filenames with metagenome reads for TARA, which we filtered to get Atlantic_samples.txt
+        
+        sets.txt: list of locations only (ANW, ANE, etc.)
+        
+        config-files/ : directory for all config files generated during quality filtering metagenomes
+        
+            all-config-files/ : all config .ini files for TARA
+            
+            atlantic-config-files/ : only Atlantic Ocean config files
+            
+        PROCHLOROCOCCUS-FASTA-FILES/ : directory containing unzipped Prochlorococcus fasta files and SAGs
+        
+            Maria_SAGs : directory containing SAGs provided by Maria
+            
+        quality-filtered-fastqs/ : quality-filtered Atlantic Ocean TARA fastq files associated with metagenomes
+        
+            *QUALITY-PASSED* files are outputs from quality filtering step, denoised and cleaned fastqs
+            
             *STATS.txt* files summarize reads passing quality filtering and other information for each metagenome 
 
     databases/  
-        EQPAC1-ENV-DETECTION.txt : 
-        EQPAC1-GENE-COVs.txt : 
+    
+        EQPAC1-ENV-DETECTION.txt :
+        
+        EQPAC1-GENE-COVs.txt :
+        
         MIT9314-ENV-DETECTION.txt : 
+        
         MIT9314-GENE-COVs.txt  
 
 envs/
