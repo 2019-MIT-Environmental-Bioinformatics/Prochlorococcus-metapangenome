@@ -43,10 +43,6 @@ And saved the environment using:
 After attempting to run a later step, we realized that another necessary part of the installation was setting up the NCBI COG database: 
     
     anvi-setup-ncbi-cogs
-    
-In addition, sra-tools is required to download SAGs:
-    
-    conda install -c bioconda sra-tools
 
 # Downloading data
 
@@ -72,7 +68,7 @@ We also included in the analysis 5 new SAGs (courtesy of Maria), which were down
     AG-422-K10    ERS3877429
     AG-404-D14    ERS3876520
     
-We located the corresponding SRR ID for each SAG and downloaded them with sra-tools. 
+We located the ftp directories for these SAGS at NCBI using the BioProject accession PRJEB33281. After downloading correct assemblies, these files were transferred onto Poseidon.
 To unzip each of these files: 
 
     for fasta in Maria_SAGs/
