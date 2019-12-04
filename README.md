@@ -7,9 +7,28 @@ We propose to use the 31 isolate genomes for Prochlorococcus that Delmont and Er
 
 # Repository Structure and Files
 
-data/
+data/ : contains raw data for metagenomes and isolates, quality-filtered fastqs, text files required for associating reads to metagenomes, config files for quality filtering, and any files required to clean and assemble data for anvi'o
+    Atlantic_Sample_IDs.txt : list of all TARA fastq files associated with Atlantic Ocean metagenomes
+    Atlantic_samples.txt : associates fasta filenames with metagenome reads 1 and 2 for Atlantic Ocean TARA metagenomes
+    ftp-links-for-raw-data-files.txt: ftp links for Atlantic Ocean TARA metagenomes, we tried to use this to download TARA data prior to receiving them from Maria 
+    PROCHLOROCOCCUS-FASTA-FILES.tar.gz : zipped Prochlorococcus fasta files downloaded from Meren's blog, same ones as used in their analysis
+    internal-genomes.txt :
+    samples.txt : original list associating fasta filenames with metagenome reads for TARA, which we filtered to get Atlantic_samples.txt
+    sets.txt: list of locations only (ANW, ANE, etc.)
+    config-files/ : directory for all config files generated during quality filtering metagenomes 
+        all-config-files/ : all config .ini files for TARA
+        atlantic-config-files/ : only Atlantic Ocean config files
+    PROCHLOROCOCCUS-FASTA-FILES/ : directory containing unzipped Prochlorococcus fasta files and SAGs
+        Maria_SAGs : directory containing SAGs provided by Maria
+    quality-filtered-fastqs/ : quality-filtered Atlantic Ocean TARA fastq files associated with metagenomes
+        *QUALITY-PASSED* files are outputs from quality filtering step, denoised and cleaned fastqs
+        *STATS.txt* files summarize reads passing quality filtering and other information for each metagenome
 
 databases/ 
+     EQPAC1-ENV-DETECTION.txt :
+     EQPAC1-GENE-COVs.txt :
+     MIT9314-ENV-DETECTION.txt :
+     MIT9314-GENE-COVs.txt 
 
 envs/
 
@@ -118,7 +137,11 @@ The contents of a config file are as follows:
     pair_1 = ERR599003_1.fastq.gz,ERR598955_1.fastq.gz
     pair_2 = ERR599003_2.fastq.gz,ERR598955_2.fastq.gz
 
-For the actual quality filtering, we made the slurm script quality-filtering.sh. Since quality filtering requires significant time to run and the maximum time we could request on Poseidon was 20 hours, we had to rerun this script several times to perform QC on each metagenome. In addition, several metagenomes had multiple fasta files associated with each read. As each fasta file in the TARA directory was located in its own subdirectory, and the .ini config files cannot read from multiple directories, we had to copy these fasta files into our home directory for this step to work. 
+For the actual quality filtering, we made the slurm script quality-filtering.sh and submitted:
+
+    sbatch scripts/quality-filtering.sh
+
+Since quality filtering requires significant time to run and the maximum time we could request on Poseidon was 20 hours, we had to rerun this script several times to perform QC on each metagenome. In addition, several metagenomes had multiple fasta files associated with each read. As each fasta file in the TARA directory was located in its own subdirectory, and the .ini config files cannot read from multiple directories, we had to copy these fasta files into our home directory for this step to work. 
 
 The contents of quality-filtering.sh are as follows:
     
@@ -197,6 +220,8 @@ We summarized the results of the pangenome analysis with the following command:
 To characterize the ratio of environmentally accessory genes (EAGs) to environmentally core genes (ECGs) in each gene cluster in the pangenome, we classified genes with less than 25% of the median coverage of all genes found in the genome as EAGs. This is the same threshold used by Delmont and Eren. We used this command which we ran through the slurm script anvi-meta-pan-genome.sh:
 
     anvi-meta-pan-genome -p Prochlorococcus-ISOLATE-PAN/Prochloroccocus-ISOLATE-PAN-PAN.db -g Prochlorococcus-ISOLATE-PAN-  GENOMES.db -i ../data/internal-genomes.txt --fraction-of-median-coverage 0.25 
+    
+    sbatch scripts/anvi-meta-pangenome.sh
 
 To visualize the distribution of genes in a single genome across a set of metagenomes, we chose to look at the same genomes as Delmont and Eren: MIT9314 and EQPAC1 in our Atlantic Ocean metagenomes. We ran the following commands using the same 25% threshold as above:
 
