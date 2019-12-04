@@ -96,6 +96,17 @@ files as Atlantic_samples.txt.
 To perform quality filtering on the metagenomes (removing noise), we used the illumina-utils library. The iu-gen-configs command generates config files (.ini file extension) which are used in the downstream steps to associate raw reads with the correct sample IDs and locations. 
     
     iu-gen-configs Atlantic_samples.txt
+    
+The contents of a config file are as follows:
+
+    project_name = ANE_004_05M
+    researcher_email = u@example.edu
+    input_directory = /vortexfs1/home/izhang/TARA
+    output_directory = /vortexfs1/omics/env-bio/collaboration/Prochlorococcus-metapangenome/data
+
+    [files]
+    pair_1 = ERR599003_1.fastq.gz,ERR598955_1.fastq.gz
+    pair_2 = ERR599003_2.fastq.gz,ERR598955_2.fastq.gz
 
 For the actual quality filtering, we made the slurm script quality-filtering.sh. Since quality filtering requires significant time to run and the maximum time we could request on Poseidon was 20 hours, we had to rerun this script several times to perform QC on each metagenome. In addition, several metagenomes had multiple fasta files associated with each read. As each fasta file in the TARA directory was located in its own subdirectory, and the .ini config files cannot read from multiple directories, we had to copy these fasta files into our home directory for this step to work. 
 
