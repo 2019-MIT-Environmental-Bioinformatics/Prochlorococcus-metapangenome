@@ -59,7 +59,17 @@ To combine these into a single fasta file, run the following command:
 
     cat CONTIGS-FOR-ISOLATES.fa CONTIGS-FOR-SAGs.fa > Prochlorococcus-genomes.fa
 
-We also included in the analysis 5 new SAGs (courtesy of Maria), which were downloaded into the folder *Maria_SAGs*. To unzip each of these files: 
+We also included in the analysis 5 new SAGs (courtesy of Maria), which were downloaded into the folder *Maria_SAGs*. The SAG IDs are:
+
+    SAG_id    Accession
+    AG-893-K05    ERS3871084
+    AH-321-C14    ERS3869306
+    AG-349-G23    ERS3869306
+    AG-422-K10    ERS3877429
+    AG-404-D14    ERS3876520
+    
+We located the corresponding SRR ID for each SAG and downloaded them with sra-tools. 
+To unzip each of these files: 
 
     for fasta in Maria_SAGs/
     do
