@@ -165,10 +165,15 @@ We summarized the results of the pangenome analysis with the following command:
 
 # Linking pangenome to environment:
 
-To 
+To characterize the ratio of environmentally accessory genes (EAGs) to environmentally core genes (ECGs) in each gene cluster in the pangenome, we classified genes with less than 25% of the median coverage of all genes found in the genome as EAGs. This is the same threshold used by Delmont and Eren. We used this command:
 
-anvi-meta-pan-genome -p Prochlorococcus-ISOLATE-PAN/Prochloroccocus-ISOLATE-PAN-PAN.db -g Prochlorococcus-ISOLATE-PAN-GENOMES.db -i ../data/internal-genomes.txt --fraction-of-median-coverage 0.25 
+    anvi-meta-pan-genome -p Prochlorococcus-ISOLATE-PAN/Prochloroccocus-ISOLATE-PAN-PAN.db -g Prochlorococcus-ISOLATE-PAN-  GENOMES.db -i ../data/internal-genomes.txt --fraction-of-median-coverage 0.25 
 
+To visualize the distribution of genes in a single genome across a set of metagenomes, we chose to look at the same genomes as Delmont and Eren: MIT9314 and EQPAC1 in our Atlantic Ocean metagenomes. We ran the following commands using the same 25% threshold as above:
+
+    anvi-script-gen-distribution-of-genes-in-a-bin -c Prochlorococcus-CONTIGS.db -p Prochlorococcus-MERGED/PROFILE.db -b MIT9314 -C Genomes --fraction-of-median-coverage 0.25 
+
+    anvi-script-gen-distribution-of-genes-in-a-bin -c Prochlorococcus-CONTIGS.db -p Prochlorococcus-MERGED/PROFILE.db -b EQPAC1 -C Genomes --fraction-of-median-coverage 0.25 
 
 # Contribution Statement ALG
 
