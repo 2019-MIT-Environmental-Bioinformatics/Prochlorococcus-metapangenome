@@ -43,6 +43,10 @@ And saved the environment using:
 After attempting to run a later step, we realized that another necessary part of the installation was setting up the NCBI COG database: 
     
     anvi-setup-ncbi-cogs
+    
+In addition, sra-tools is required to download SAGs:
+    
+    conda install -c bioconda sra-tools
 
 # Downloading data
 
