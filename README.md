@@ -8,12 +8,9 @@ We propose to use the 31 isolate genomes for Prochlorococcus that Delmont and Er
 # Repository Structure and Files
 
 data/ : contains raw data for metagenomes and isolates, quality-filtered fastqs, text files required for associating reads to metagenomes, config files for quality filtering, and any files required to clean and assemble data for anvi'o
-    
-    Atlantic_Sample_IDs.txt : list of all TARA fastq files associated with Atlantic Ocean metagenomes
-        
-Atlantic_samples.txt : associates fasta filenames with metagenome reads 1 and 2 for Atlantic Ocean TARA metagenomes
-        
-ftp-links-for-raw-data-files.txt: ftp links for Atlantic Ocean TARA metagenomes, we tried to use this to download TARA data prior to receiving them from Maria 
+    Atlantic_Sample_IDs.txt : list of all TARA fastq files associated with Atlantic Ocean metagenomes 
+    Atlantic_samples.txt : associates fasta filenames with metagenome reads 1 and 2 for Atlantic Ocean TARA metagenomes
+    ftp-links-for-raw-data-files.txt: ftp links for Atlantic Ocean TARA metagenomes, we tried to use this to download TARA data prior to receiving them from Maria 
         
 PROCHLOROCOCCUS-FASTA-FILES.tar.gz : zipped Prochlorococcus fasta files downloaded from Meren's blog, same ones as used in their analysis
         
