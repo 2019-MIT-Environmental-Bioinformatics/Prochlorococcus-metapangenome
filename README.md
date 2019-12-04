@@ -240,6 +240,10 @@ To visualize the distribution of genes in a single genome across a set of metage
 
 # Visualizations:
     
+We visualized Figure 2 using the following command:
+
+    anvi-display-pan -p Prochlorococcus-ISOLATE-PAN/Prochloroccocus-ISOLATE-PAN-PAN.db -g Prochlorococcus-ISOLATE-PAN-GENOMES.db --title "Prochlorococcus Metapangenome” --server-only
+    
 We attempted to attach the state file GENES-PROFILE.json file from Meren's blog for visualization of Figure 3 using the command:
     
     anvi-import-state -s GENES-PROFILE.json -p Prochloroccocus-PAN/Prochloroccocus-PAN-PAN.db -n default
