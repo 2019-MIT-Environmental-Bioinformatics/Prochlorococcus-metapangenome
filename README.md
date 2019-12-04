@@ -263,13 +263,3 @@ Then, open a browser window and navigate to the localhost (http://localhost:8082
 To exit out of the server, we kill it using on the local machine:
     
     lsof -ti:8082 | xargs kill -9ed
-
-
-# Contribution Statement ALG
-
-ALG generated the anvi’o contigs database and assigned functions to genes using HMMer and the NCBI COGs database, recruited metagenome reads to contigs, and profiled read recruitment to generate a merged profile database and anvi’o collection. ALG computed and visualized the Prochlorococcus pangenome.
-
-
-# Contribution Statement IZ
-
-IZ downloaded required FASTA files for isolates and single-amplified genomes (SAGs) and SAGs provided by Dr. Maria Pachiadaki. IZ performed quality filtering on Atlantic Ocean TARA metagenomes, associated metagenomes with sample metadata, and classified genes as environmental core (ECG) or environmental accessory (EAG) and visualized this distribution across metagenomes. 
