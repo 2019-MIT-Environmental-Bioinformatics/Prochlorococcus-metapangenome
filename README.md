@@ -97,7 +97,15 @@ To perform quality filtering on the metagenomes (removing noise), we used the il
     
     iu-gen-configs Atlantic_samples.txt
 
-For the actual quality filtering, we made the slurm script quality-filtering.txt. Since quality filtering requires significant time to run and the maximum time we could request on Poseidon was 20 hours, we had to rerun this script several times to perform QC on each metagenome. In addition, several metagenomes had multiple fasta files associated with each read. As each fasta file in the TARA directory was located in its own subdirectory, and the .ini config files cannot read from multiple directories, we had to copy these fasta files into our home directory for this step to work. 
+For the actual quality filtering, we made the slurm script quality-filtering.sh. Since quality filtering requires significant time to run and the maximum time we could request on Poseidon was 20 hours, we had to rerun this script several times to perform QC on each metagenome. In addition, several metagenomes had multiple fasta files associated with each read. As each fasta file in the TARA directory was located in its own subdirectory, and the .ini config files cannot read from multiple directories, we had to copy these fasta files into our home directory for this step to work. 
+
+The contents of quality-filtering.sh are as follows:
+    
+    for sample in `awk '{print $1}' Atlantic_samples.txt`
+    do
+        if [ "$sample" == "sample" ]; then continue; fi
+        iu-filter-quality-minoche $sample.ini --ignore-deflines
+    done
 
 The .STATS file for quality-filtering.txt contains the following information for each metagenome:
 
