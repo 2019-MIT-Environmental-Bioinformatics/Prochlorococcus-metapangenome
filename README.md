@@ -13,7 +13,7 @@ data/ : contains raw data for metagenomes and isolates, quality-filtered fastqs,
     Atlantic_samples.txt : associates fasta filenames with metagenome reads 1 and 2 for Atlantic Ocean TARA metagenomes
     ftp-links-for-raw-data-files.txt: ftp links for Atlantic Ocean TARA metagenomes, we tried to use this to download TARA data prior to receiving them from Maria 
     PROCHLOROCOCCUS-FASTA-FILES.tar.gz : zipped Prochlorococcus fasta files downloaded from Meren's blog, same ones as used in their analysis
-    internal-genomes.txt : 
+    internal-genomes.txt : internal genomes file received from Meren's blog 
     samples.txt : original list associating fasta filenames with metagenome reads for TARA, which we filtered to get Atlantic_samples.txt
     sets.txt: list of locations only (ANW, ANE, etc.)
     config-files/ : directory for all config files generated during quality filtering metagenomes
