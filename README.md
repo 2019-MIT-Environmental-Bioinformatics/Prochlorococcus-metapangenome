@@ -13,7 +13,7 @@ data/ : contains raw data for metagenomes and isolates, quality-filtered fastqs,
     Atlantic_samples.txt : associates fasta filenames with metagenome reads 1 and 2 for Atlantic Ocean TARA metagenomes
     ftp-links-for-raw-data-files.txt: ftp links for Atlantic Ocean TARA metagenomes, we tried to use this to download TARA data prior to receiving them from Maria 
     PROCHLOROCOCCUS-FASTA-FILES.tar.gz : zipped Prochlorococcus fasta files downloaded from Meren's blog, same ones as used in their analysis
-    internal-genomes.txt : 
+    internal-genomes.txt : internal genomes file received from Meren's blog 
     samples.txt : original list associating fasta filenames with metagenome reads for TARA, which we filtered to get Atlantic_samples.txt
     sets.txt: list of locations only (ANW, ANE, etc.)
     config-files/ : directory for all config files generated during quality filtering metagenomes
@@ -52,15 +52,35 @@ envs/ : contains the .yaml conda environment file necessary to install packages 
 jupyter-notebooks/ : contains final jupyter notebook containing our images and comparisons and the jupyter notebook used in creating the collections and internal-genomes files. 
 
 logs/  : all .log files generated from slurm scripts we used. 
+        
+        bowtie_*.log : logs from bowtie-map.sh
+        quality-filter.log : log from quality-filtering.sh
+        anvi-meta-pan-genome.log : log from anvi-meta-pan-genome.sh
+        *pangenome*.log : logs from pangenome.sh
+        anvi-db*.log : logs from anvi-db-cogs-hmms.sh
 
-output/ : summary files from anvi'o
+output/ : summary files from anvi'o and images from our analysis
+    
+        genes-in-two-genomes.png: Meren's EQPAC1 and MIT314 image (Fig 3)
+        Prochlorococcus_Metapangenome images: Meren's metapangenome visualization (Fig 2)
+        Prochlorococcus-SUMMARY/ : summary files from visualization of contigs db
+        Prochlorococcus-Isolate-PAN-SUMMARY/ : summary files form pangenome visualization
+        Prochlorococcus_EQPAC1_MIT9314.png : our Fig 3
+        Genes_in__MIT9314___mode__Standard_.png : our MIT9314 visualization only
+        Genes_in__EQPAC1___mode__Standard_ : our EQPAC1 visualization only
+        Prochloroccocus_ISOLATE_PAN : our pangenome visualization (Fig 2)
 
 README.md  : this README describing our workflow
 
 scripts/ : any scripts, bash or otherwise, we submitted to the cluster
-    
+
     quality-filtering.sh : script to quality filter TARA Atlantic Ocean metagenomes to generate *QUALITY-PASSED*.fastq and *STATs files and associate fastqs to metagenomes
-    anvi-meta-pan-genome.sh : characterizes core and accessory genes using 25% median coverage threshold and add this information to Prochloroccocus-ISOLATE-PAN-PAN.db file
+    anvi-meta-pan-genome.sh : characterizes core and accessory genes and add information to Prochloroccocus-ISOLATE-PAN-PAN.db 
+    anvi-db-cogs-hmms.sh : script to run Blast and HMMs on contigs
+    anvi-profile.sh	: makes anvi'o profiles for each metagenome sample
+    bowtie-map.sh : runs Bowtie
+    collection-file.sh : makes the collection file 
+    pangenome.sh : computes the pangenome
     
 
 # Anvi'o installation
