@@ -1,0 +1,425 @@
+128766544 reads; of these:
+  128766544 (100.00%) were paired; of these:
+    128038553 (99.43%) aligned concordantly 0 times
+    28191 (0.02%) aligned concordantly exactly 1 time
+    699800 (0.54%) aligned concordantly >1 times
+    ----
+    128038553 pairs aligned concordantly 0 times; of these:
+      278 (0.00%) aligned discordantly 1 time
+    ----
+    128038275 pairs aligned 0 times concordantly or discordantly; of these:
+      256076550 mates make up the pairs; of these:
+        255991480 (99.97%) aligned 0 times
+        16663 (0.01%) aligned exactly 1 time
+        68407 (0.03%) aligned >1 times
+0.60% overall alignment rate
+[E::hts_open_format] Failed to open file outputASE_66_05M.sam
+samtools view: failed to open "outputASE_66_05M.sam" for reading: No such file or directory
+74292359 reads; of these:
+  74292359 (100.00%) were paired; of these:
+    74286358 (99.99%) aligned concordantly 0 times
+    365 (0.00%) aligned concordantly exactly 1 time
+    5636 (0.01%) aligned concordantly >1 times
+    ----
+    74286358 pairs aligned concordantly 0 times; of these:
+      15 (0.00%) aligned discordantly 1 time
+    ----
+    74286343 pairs aligned 0 times concordantly or discordantly; of these:
+      148572686 mates make up the pairs; of these:
+        148562469 (99.99%) aligned 0 times
+        1396 (0.00%) aligned exactly 1 time
+        8821 (0.01%) aligned >1 times
+0.01% overall alignment rate
+[E::hts_open_format] Failed to open file outputASE_67_05M.sam
+samtools view: failed to open "outputASE_67_05M.sam" for reading: No such file or directory
+123853925 reads; of these:
+  123853925 (100.00%) were paired; of these:
+    113037879 (91.27%) aligned concordantly 0 times
+    279900 (0.23%) aligned concordantly exactly 1 time
+    10536146 (8.51%) aligned concordantly >1 times
+    ----
+    113037879 pairs aligned concordantly 0 times; of these:
+      2838 (0.00%) aligned discordantly 1 time
+    ----
+    113035041 pairs aligned 0 times concordantly or discordantly; of these:
+      226070082 mates make up the pairs; of these:
+        225374363 (99.69%) aligned 0 times
+        151096 (0.07%) aligned exactly 1 time
+        544623 (0.24%) aligned >1 times
+9.02% overall alignment rate
+[E::hts_open_format] Failed to open file outputASE_68_05M.sam
+samtools view: failed to open "outputASE_68_05M.sam" for reading: No such file or directory
+107588246 reads; of these:
+  107588246 (100.00%) were paired; of these:
+    104017175 (96.68%) aligned concordantly 0 times
+    213569 (0.20%) aligned concordantly exactly 1 time
+    3357502 (3.12%) aligned concordantly >1 times
+    ----
+    104017175 pairs aligned concordantly 0 times; of these:
+      3045 (0.00%) aligned discordantly 1 time
+    ----
+    104014130 pairs aligned 0 times concordantly or discordantly; of these:
+      208028260 mates make up the pairs; of these:
+        207630993 (99.81%) aligned 0 times
+        93738 (0.05%) aligned exactly 1 time
+        303529 (0.15%) aligned >1 times
+3.51% overall alignment rate
+[E::hts_open_format] Failed to open file outputASE_70_05M.sam
+samtools view: failed to open "outputASE_70_05M.sam" for reading: No such file or directory
+192904908 reads; of these:
+  192904908 (100.00%) were paired; of these:
+    174420690 (90.42%) aligned concordantly 0 times
+    648886 (0.34%) aligned concordantly exactly 1 time
+    17835332 (9.25%) aligned concordantly >1 times
+    ----
+    174420690 pairs aligned concordantly 0 times; of these:
+      13231 (0.01%) aligned discordantly 1 time
+    ----
+    174407459 pairs aligned 0 times concordantly or discordantly; of these:
+      348814918 mates make up the pairs; of these:
+        347576270 (99.64%) aligned 0 times
+        302420 (0.09%) aligned exactly 1 time
+        936228 (0.27%) aligned >1 times
+9.91% overall alignment rate
+[E::hts_open_format] Failed to open file outputASW_72_05M.sam
+samtools view: failed to open "outputASW_72_05M.sam" for reading: No such file or directory
+198367593 reads; of these:
+  198367593 (100.00%) were paired; of these:
+    185055626 (93.29%) aligned concordantly 0 times
+    439759 (0.22%) aligned concordantly exactly 1 time
+    12872208 (6.49%) aligned concordantly >1 times
+    ----
+    185055626 pairs aligned concordantly 0 times; of these:
+      10129 (0.01%) aligned discordantly 1 time
+    ----
+    185045497 pairs aligned 0 times concordantly or discordantly; of these:
+      370090994 mates make up the pairs; of these:
+        369104015 (99.73%) aligned 0 times
+        225600 (0.06%) aligned exactly 1 time
+        761379 (0.21%) aligned >1 times
+6.96% overall alignment rate
+[E::hts_open_format] Failed to open file outputASW_76_05M.sam
+samtools view: failed to open "outputASW_76_05M.sam" for reading: No such file or directory
+210418876 reads; of these:
+  210418876 (100.00%) were paired; of these:
+    186185743 (88.48%) aligned concordantly 0 times
+    890843 (0.42%) aligned concordantly exactly 1 time
+    23342290 (11.09%) aligned concordantly >1 times
+    ----
+    186185743 pairs aligned concordantly 0 times; of these:
+      18622 (0.01%) aligned discordantly 1 time
+    ----
+    186167121 pairs aligned 0 times concordantly or discordantly; of these:
+      372334242 mates make up the pairs; of these:
+        370199518 (99.43%) aligned 0 times
+        491253 (0.13%) aligned exactly 1 time
+        1643471 (0.44%) aligned >1 times
+12.03% overall alignment rate
+[E::hts_open_format] Failed to open file outputASW_78_05M.sam
+samtools view: failed to open "outputASW_78_05M.sam" for reading: No such file or directory
+126027308 reads; of these:
+  126027308 (100.00%) were paired; of these:
+    126013588 (99.99%) aligned concordantly 0 times
+    372 (0.00%) aligned concordantly exactly 1 time
+    13348 (0.01%) aligned concordantly >1 times
+    ----
+    126013588 pairs aligned concordantly 0 times; of these:
+      9 (0.00%) aligned discordantly 1 time
+    ----
+    126013579 pairs aligned 0 times concordantly or discordantly; of these:
+      252027158 mates make up the pairs; of these:
+        251998147 (99.99%) aligned 0 times
+        1678 (0.00%) aligned exactly 1 time
+        27333 (0.01%) aligned >1 times
+0.02% overall alignment rate
+[E::hts_open_format] Failed to open file outputASW_82_05M.sam
+samtools view: failed to open "outputASW_82_05M.sam" for reading: No such file or directory
+184535177 reads; of these:
+  184535177 (100.00%) were paired; of these:
+    168590184 (91.36%) aligned concordantly 0 times
+    257145 (0.14%) aligned concordantly exactly 1 time
+    15687848 (8.50%) aligned concordantly >1 times
+    ----
+    168590184 pairs aligned concordantly 0 times; of these:
+      3892 (0.00%) aligned discordantly 1 time
+    ----
+    168586292 pairs aligned 0 times concordantly or discordantly; of these:
+      337172584 mates make up the pairs; of these:
+        336162705 (99.70%) aligned 0 times
+        182353 (0.05%) aligned exactly 1 time
+        827526 (0.25%) aligned >1 times
+8.92% overall alignment rate
+[E::hts_open_format] Failed to open file outputANE_004_05M.sam
+samtools view: failed to open "outputANE_004_05M.sam" for reading: No such file or directory
+174174635 reads; of these:
+  174174635 (100.00%) were paired; of these:
+    163172301 (93.68%) aligned concordantly 0 times
+    285510 (0.16%) aligned concordantly exactly 1 time
+    10716824 (6.15%) aligned concordantly >1 times
+    ----
+    163172301 pairs aligned concordantly 0 times; of these:
+      3914 (0.00%) aligned discordantly 1 time
+    ----
+    163168387 pairs aligned 0 times concordantly or discordantly; of these:
+      326336774 mates make up the pairs; of these:
+        325612565 (99.78%) aligned 0 times
+        158363 (0.05%) aligned exactly 1 time
+        565846 (0.17%) aligned >1 times
+6.53% overall alignment rate
+[E::hts_open_format] Failed to open file outputANE_150_05M.sam
+samtools view: failed to open "outputANE_150_05M.sam" for reading: No such file or directory
+177719925 reads; of these:
+  177719925 (100.00%) were paired; of these:
+    170410233 (95.89%) aligned concordantly 0 times
+    146165 (0.08%) aligned concordantly exactly 1 time
+    7163527 (4.03%) aligned concordantly >1 times
+    ----
+    170410233 pairs aligned concordantly 0 times; of these:
+      1921 (0.00%) aligned discordantly 1 time
+    ----
+    170408312 pairs aligned 0 times concordantly or discordantly; of these:
+      340816624 mates make up the pairs; of these:
+        340334086 (99.86%) aligned 0 times
+        102943 (0.03%) aligned exactly 1 time
+        379595 (0.11%) aligned >1 times
+4.25% overall alignment rate
+[E::hts_open_format] Failed to open file outputANE_151_05M.sam
+samtools view: failed to open "outputANE_151_05M.sam" for reading: No such file or directory
+154165928 reads; of these:
+  154165928 (100.00%) were paired; of these:
+    148820491 (96.53%) aligned concordantly 0 times
+    145860 (0.09%) aligned concordantly exactly 1 time
+    5199577 (3.37%) aligned concordantly >1 times
+    ----
+    148820491 pairs aligned concordantly 0 times; of these:
+      1730 (0.00%) aligned discordantly 1 time
+    ----
+    148818761 pairs aligned 0 times concordantly or discordantly; of these:
+      297637522 mates make up the pairs; of these:
+        297171797 (99.84%) aligned 0 times
+        92550 (0.03%) aligned exactly 1 time
+        373175 (0.13%) aligned >1 times
+3.62% overall alignment rate
+[E::hts_open_format] Failed to open file outputANE_152_05M.sam
+samtools view: failed to open "outputANE_152_05M.sam" for reading: No such file or directory
+161109098 reads; of these:
+  161109098 (100.00%) were paired; of these:
+    157630653 (97.84%) aligned concordantly 0 times
+    85599 (0.05%) aligned concordantly exactly 1 time
+    3392846 (2.11%) aligned concordantly >1 times
+    ----
+    157630653 pairs aligned concordantly 0 times; of these:
+      1055 (0.00%) aligned discordantly 1 time
+    ----
+    157629598 pairs aligned 0 times concordantly or discordantly; of these:
+      315259196 mates make up the pairs; of these:
+        315112765 (99.95%) aligned 0 times
+        37072 (0.01%) aligned exactly 1 time
+        109359 (0.03%) aligned >1 times
+2.21% overall alignment rate
+[E::hts_open_format] Failed to open file outputANW_141_05M.sam
+samtools view: failed to open "outputANW_141_05M.sam" for reading: No such file or directory
+148931622 reads; of these:
+  148931622 (100.00%) were paired; of these:
+    138460618 (92.97%) aligned concordantly 0 times
+    225692 (0.15%) aligned concordantly exactly 1 time
+    10245312 (6.88%) aligned concordantly >1 times
+    ----
+    138460618 pairs aligned concordantly 0 times; of these:
+      3459 (0.00%) aligned discordantly 1 time
+    ----
+    138457159 pairs aligned 0 times concordantly or discordantly; of these:
+      276914318 mates make up the pairs; of these:
+        276588683 (99.88%) aligned 0 times
+        72837 (0.03%) aligned exactly 1 time
+        252798 (0.09%) aligned >1 times
+7.14% overall alignment rate
+[E::hts_open_format] Failed to open file outputANW_142_05M.sam
+samtools view: failed to open "outputANW_142_05M.sam" for reading: No such file or directory
+164887873 reads; of these:
+  164887873 (100.00%) were paired; of these:
+    164854757 (99.98%) aligned concordantly 0 times
+    1514 (0.00%) aligned concordantly exactly 1 time
+    31602 (0.02%) aligned concordantly >1 times
+    ----
+    164854757 pairs aligned concordantly 0 times; of these:
+      28 (0.00%) aligned discordantly 1 time
+    ----
+    164854729 pairs aligned 0 times concordantly or discordantly; of these:
+      329709458 mates make up the pairs; of these:
+        329682890 (99.99%) aligned 0 times
+        3097 (0.00%) aligned exactly 1 time
+        23471 (0.01%) aligned >1 times
+0.03% overall alignment rate
+[E::hts_open_format] Failed to open file outputANW_145_05M.sam
+samtools view: failed to open "outputANW_145_05M.sam" for reading: No such file or directory
+159790673 reads; of these:
+  159790673 (100.00%) were paired; of these:
+    157858216 (98.79%) aligned concordantly 0 times
+    61392 (0.04%) aligned concordantly exactly 1 time
+    1871065 (1.17%) aligned concordantly >1 times
+    ----
+    157858216 pairs aligned concordantly 0 times; of these:
+      963 (0.00%) aligned discordantly 1 time
+    ----
+    157857253 pairs aligned 0 times concordantly or discordantly; of these:
+      315714506 mates make up the pairs; of these:
+        315594835 (99.96%) aligned 0 times
+        25178 (0.01%) aligned exactly 1 time
+        94493 (0.03%) aligned >1 times
+1.25% overall alignment rate
+[E::hts_open_format] Failed to open file outputANW_146_05M.sam
+samtools view: failed to open "outputANW_146_05M.sam" for reading: No such file or directory
+159232942 reads; of these:
+  159232942 (100.00%) were paired; of these:
+    155520239 (97.67%) aligned concordantly 0 times
+    105267 (0.07%) aligned concordantly exactly 1 time
+    3607436 (2.27%) aligned concordantly >1 times
+    ----
+    155520239 pairs aligned concordantly 0 times; of these:
+      1500 (0.00%) aligned discordantly 1 time
+    ----
+    155518739 pairs aligned 0 times concordantly or discordantly; of these:
+      311037478 mates make up the pairs; of these:
+        310873308 (99.95%) aligned 0 times
+        37009 (0.01%) aligned exactly 1 time
+        127161 (0.04%) aligned >1 times
+2.38% overall alignment rate
+[E::hts_open_format] Failed to open file outputANW_148_05M.sam
+samtools view: failed to open "outputANW_148_05M.sam" for reading: No such file or directory
+163833487 reads; of these:
+  163833487 (100.00%) were paired; of these:
+    162539226 (99.21%) aligned concordantly 0 times
+    54283 (0.03%) aligned concordantly exactly 1 time
+    1239978 (0.76%) aligned concordantly >1 times
+    ----
+    162539226 pairs aligned concordantly 0 times; of these:
+      843 (0.00%) aligned discordantly 1 time
+    ----
+    162538383 pairs aligned 0 times concordantly or discordantly; of these:
+      325076766 mates make up the pairs; of these:
+        324961558 (99.96%) aligned 0 times
+        26793 (0.01%) aligned exactly 1 time
+        88415 (0.03%) aligned >1 times
+0.83% overall alignment rate
+[E::hts_open_format] Failed to open file outputANW_149_05M.sam
+samtools view: failed to open "outputANW_149_05M.sam" for reading: No such file or directory
+69338333 reads; of these:
+  69338333 (100.00%) were paired; of these:
+    68825953 (99.26%) aligned concordantly 0 times
+    19617 (0.03%) aligned concordantly exactly 1 time
+    492763 (0.71%) aligned concordantly >1 times
+    ----
+    68825953 pairs aligned concordantly 0 times; of these:
+      216 (0.00%) aligned discordantly 1 time
+    ----
+    68825737 pairs aligned 0 times concordantly or discordantly; of these:
+      137651474 mates make up the pairs; of these:
+        137588701 (99.95%) aligned 0 times
+        11294 (0.01%) aligned exactly 1 time
+        51479 (0.04%) aligned >1 times
+0.78% overall alignment rate
+[E::hts_open_format] Failed to open file outputASE_66_30M.sam
+samtools view: failed to open "outputASE_66_30M.sam" for reading: No such file or directory
+110709609 reads; of these:
+  110709609 (100.00%) were paired; of these:
+    100349955 (90.64%) aligned concordantly 0 times
+    283134 (0.26%) aligned concordantly exactly 1 time
+    10076520 (9.10%) aligned concordantly >1 times
+    ----
+    100349955 pairs aligned concordantly 0 times; of these:
+      3352 (0.00%) aligned discordantly 1 time
+    ----
+    100346603 pairs aligned 0 times concordantly or discordantly; of these:
+      200693206 mates make up the pairs; of these:
+        200023783 (99.67%) aligned 0 times
+        127533 (0.06%) aligned exactly 1 time
+        541890 (0.27%) aligned >1 times
+9.66% overall alignment rate
+[E::hts_open_format] Failed to open file outputASE_68_50M.sam
+samtools view: failed to open "outputASE_68_50M.sam" for reading: No such file or directory
+150772650 reads; of these:
+  150772650 (100.00%) were paired; of these:
+    147786277 (98.02%) aligned concordantly 0 times
+    288127 (0.19%) aligned concordantly exactly 1 time
+    2698246 (1.79%) aligned concordantly >1 times
+    ----
+    147786277 pairs aligned concordantly 0 times; of these:
+      4405 (0.00%) aligned discordantly 1 time
+    ----
+    147781872 pairs aligned 0 times concordantly or discordantly; of these:
+      295563744 mates make up the pairs; of these:
+        294723001 (99.72%) aligned 0 times
+        210135 (0.07%) aligned exactly 1 time
+        630608 (0.21%) aligned >1 times
+2.26% overall alignment rate
+[E::hts_open_format] Failed to open file outputASW_72_100M.sam
+samtools view: failed to open "outputASW_72_100M.sam" for reading: No such file or directory
+204045433 reads; of these:
+  204045433 (100.00%) were paired; of these:
+    204029920 (99.99%) aligned concordantly 0 times
+    411 (0.00%) aligned concordantly exactly 1 time
+    15102 (0.01%) aligned concordantly >1 times
+    ----
+    204029920 pairs aligned concordantly 0 times; of these:
+      3 (0.00%) aligned discordantly 1 time
+    ----
+    204029917 pairs aligned 0 times concordantly or discordantly; of these:
+      408059834 mates make up the pairs; of these:
+        408021266 (99.99%) aligned 0 times
+        1999 (0.00%) aligned exactly 1 time
+        36569 (0.01%) aligned >1 times
+0.02% overall alignment rate
+[E::hts_open_format] Failed to open file outputASW_82_40M.sam
+samtools view: failed to open "outputASW_82_40M.sam" for reading: No such file or directory
+211851937 reads; of these:
+  211851937 (100.00%) were paired; of these:
+    200449716 (94.62%) aligned concordantly 0 times
+    415460 (0.20%) aligned concordantly exactly 1 time
+    10986761 (5.19%) aligned concordantly >1 times
+    ----
+    200449716 pairs aligned concordantly 0 times; of these:
+      4000 (0.00%) aligned discordantly 1 time
+    ----
+    200445716 pairs aligned 0 times concordantly or discordantly; of these:
+      400891432 mates make up the pairs; of these:
+        400222799 (99.83%) aligned 0 times
+        159975 (0.04%) aligned exactly 1 time
+        508658 (0.13%) aligned >1 times
+5.54% overall alignment rate
+[E::hts_open_format] Failed to open file outputANE_004_40M.sam
+samtools view: failed to open "outputANE_004_40M.sam" for reading: No such file or directory
+166816431 reads; of these:
+  166816431 (100.00%) were paired; of these:
+    157117931 (94.19%) aligned concordantly 0 times
+    274792 (0.16%) aligned concordantly exactly 1 time
+    9423708 (5.65%) aligned concordantly >1 times
+    ----
+    157117931 pairs aligned concordantly 0 times; of these:
+      3820 (0.00%) aligned discordantly 1 time
+    ----
+    157114111 pairs aligned 0 times concordantly or discordantly; of these:
+      314228222 mates make up the pairs; of these:
+        313526738 (99.78%) aligned 0 times
+        163106 (0.05%) aligned exactly 1 time
+        538378 (0.17%) aligned >1 times
+6.03% overall alignment rate
+[E::hts_open_format] Failed to open file outputANE_150_40M.sam
+samtools view: failed to open "outputANE_150_40M.sam" for reading: No such file or directory
+167256643 reads; of these:
+  167256643 (100.00%) were paired; of these:
+    165029533 (98.67%) aligned concordantly 0 times
+    60979 (0.04%) aligned concordantly exactly 1 time
+    2166131 (1.30%) aligned concordantly >1 times
+    ----
+    165029533 pairs aligned concordantly 0 times; of these:
+      677 (0.00%) aligned discordantly 1 time
+    ----
+    165028856 pairs aligned 0 times concordantly or discordantly; of these:
+      330057712 mates make up the pairs; of these:
+        329900872 (99.95%) aligned 0 times
+        33586 (0.01%) aligned exactly 1 time
+        123254 (0.04%) aligned >1 times
+1.38% overall alignment rate
+[E::hts_open_format] Failed to open file outputANE_151_80M.sam
+samtools view: failed to open "outputANE_151_80M.sam" for reading: No such file or directory

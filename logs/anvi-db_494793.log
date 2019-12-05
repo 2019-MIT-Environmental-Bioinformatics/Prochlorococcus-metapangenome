@@ -1,0 +1,42 @@
+COG data directory ...........................: /vortexfs1/home/angomez/.conda/envs/anvio-6.1/lib/python3.6/site-packages/anvio/data/misc/COG
+COG data source ..............................: The anvi'o default.
+COG data directory ...........................: /vortexfs1/home/angomez/.conda/envs/anvio-6.1/lib/python3.6/site-packages/anvio/data/misc/COG
+Searching with ...............................: diamond
+Directory to store temporary files ...........: /tmp/tmphoapm86e
+Directory will be removed after the run ......: True
+                                                                                                                        [48;5;6m[38;5;0m[25 Nov 19 21:47:17 Exporting 218830 sequences into a FASTA file] ...                                                  [0m                                                                                                                        
+WARNING
+===============================================
+173 entries in the sequences table had blank sequences :/ This is related to the
+issue at https://github.com/merenlab/anvio/issues/565. If this is like mid-2020
+and you still are getting this warning, please find an anvi'o developer and make
+them feel embarrassed. If it is earlier than that, then take this as a simple
+warning to remember that some gene calls in your downstream analyses may have no
+amino acid sequences, and that's actuall OK. This is a very minor issue due to
+on-the-fly addition of Ribosomal RNA gene calls to the contigs database, and
+will unlikely affect anything major. This warning will go away when anvi'o can
+seamlessly work with multiple gene callers (which we are looking forward to
+implement in the future).
+
+Sequences ....................................: 218657 sequences reported.
+FASTA ........................................: /tmp/tmphoapm86e/aa_sequences.fa
+DIAMOND is set to be .........................: Fast
+                                                                                                                        [48;5;6m[38;5;0m[25 Nov 19 21:47:17 DIAMOND] running blastp (using 20 thread(s)) ...                                                   [0m                                                                                                                        Diamond blastp results .......................: /tmp/tmphoapm86e/diamond-search-results.daa
+                                                                                                                        [48;5;6m[38;5;0m[25 Nov 19 21:48:25 DIAMOND] generating tabular output (using 20 thread(s)) ...                                        [0m                                                                                                                        Diamond tabular output file ..................: /tmp/tmphoapm86e/diamond-search-results.txt
+COG data directory ...........................: /vortexfs1/home/angomez/.conda/envs/anvio-6.1/lib/python3.6/site-packages/anvio/data/misc/COG
+COG data source ..............................: The anvi'o default.
+                                                                                                                        [48;5;6m[38;5;0m[25 Nov 19 21:48:25 Initializing COGs Data] Reading COG functions ...                                                  [0m                                                                                                                        [48;5;6m[38;5;0m[25 Nov 19 21:48:25 Initializing COGs Data] Reading COG categories ...                                                 [0m                                                                                                                        [48;5;6m[38;5;0m[25 Nov 19 21:48:25 Initializing COGs Data] Reading missing COG IDs ...                                                [0m                                                                                                                                                                                                                                                [48;5;6m[38;5;0m[25 Nov 19 21:48:25 Initializing COGs Data] Reading NCBI Protein ID to COG id converter ...                            [0m                                                                                                                        Gene functions ...............................: 286464 function calls from 2 sources for 143232 unique gene calls has been added to the contigs database.
+
+WARNING
+===============================================
+Well. Your COGs were successfully added to the database, but there were some
+garbage anvi'o brushed off under the rug. There were 5 genes in your database
+that hit 1 protein IDs in NCBIs COGs database, but since NCBI did not release
+what COGs they correspond to in the database they made available (that helps us
+to resolve protein IDs to COG ids), we could not annotate those genes with
+functions. Anvi'o apologizes on behalf of all computer scientists for half-done
+stuff we often force biologists to deal with. If you want to do some Googling,
+these were the offending protein IDs: '428319768'.
+
+
+✓ anvi-run-ncbi-cogs took 0:01:13.917410
