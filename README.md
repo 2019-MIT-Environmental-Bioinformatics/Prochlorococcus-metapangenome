@@ -34,6 +34,16 @@ databases/  : contains database and collections files output by anvi'o workflow,
         MIT9314-ENV-DETECTION.txt : Additional data file for anvi-interactive to show which MIT9314 genes occurred systemmatically across metagenomes given the ‘fraction of median coverage’ criterion
         
         MIT9314-GENE-COVs.txt : Tab-delimited matrix with coverage values for genes from MIT9314 across each metagenome for a given bin
+        
+        A* folders: Each contains PROFILE.db, which is the anvi'o profile database for that individual metagenomic sample. 
+        
+        Prochlorococcus-MERGED: Contains PROFILE.db, which is the anvi'o profile database of all the metagenomic samples merged into one. 
+        
+        Prochlorococcus-CONTIGS.db: Anvi'o contigs database generated from the isolate genomes and SAGs
+        
+        Prochlorococcus-ISOLATE-PAN: contains the result of the anvi'o pangenome analysis on ONLY the isolate genomes. 
+        Prochloroccocus-PAN: contains the resul of the anvi'o pangenome analysis on all the genomes, isolates AND SAGs. 
+        prochlorococcus-bowtie.*: results of the bowtie-build command, which built databases used in mapping the metagenomic reads to the genomes. 
 
 envs/ : contains the .yaml conda environment file necessary to install packages and anything needed to run these analyses
 
