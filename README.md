@@ -264,11 +264,9 @@ While this command works, when we attempt to visualize this PAN.db using anvi-in
 
 To visualize Figure 3 for EQPAC1 and MIT9314:
     
-    anvi-interactive -p empty.db -d MIT9314-GENE-COVs.txt -A MIT9314-ENV-DETECTION.txt --title "Prochlorococcus MIT9314 genes across TARA Oceans Project metagenomes" --server-only --manual
+    anvi-interactive -p databases/Prochlorococcus-MERGED/PROFILE.db -c databases/Prochlorococcus-CONTIGS.db -C Genomes --gene-mode -b EQPAC1 -d databases/EQPAC1-GENE-COVs.txt -A databases/EQPAC1-ENV-DETECTION.txt --title "Prochlorococcus EQPAC1 genes across TARA Oceans Project metagenomes" --server-only
 
-    anvi-interactive -p empty.db -d EQPAC1-GENE-COVs.txt -A EQPAC1-ENV-DETECTION.txt --title "Prochlorococcus EQPAC1 genes across TARA Oceans Project metagenomes" --server-only --manual
-    
-As anvi'o refused to attach our PROFILE.db file or PAN.db file to this command, we created the empty file empty.db. When PROFILE.db is attached, anvi-interactive raises multiple ConfigErrors as this profile does not have item orders. When anvi-display-pan is run using the files for EQPAC1 and MIT9314, no errors are raised but the resulting figure does not contain information for EQPAC1 and MIT9314 but is identical to our Figure 2.
+    anvi-interactive -p databases/Prochlorococcus-MERGED/PROFILE.db -c databases/Prochlorococcus-CONTIGS.db -C Genomes --gene-mode -b MIT9314 -d databases/MIT9314-GENE-COVs.txt -A databases/MIT9314-ENV-DETECTION.txt --title "Prochlorococcus MIT9314 genes across TARA Oceans Project metagenomes" --server-only
 
 Figure 4 B and C: visualizing read recruitment to isolate genomes and SAGs
 To visualize metagenomic read recruitment to several of the genomes in our collection, we used the Anvi'o interactive interface in gene mode. To more closely replicate the figure presented in the paper, we adjusted the figure through the interactive interface by viewing the plot as a 360 degree circle. For example, to visualize isolate NATL2A, we ran the command:
