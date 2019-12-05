@@ -42,14 +42,16 @@ databases/  : contains database and collections files output by anvi'o workflow,
         Prochlorococcus-CONTIGS.db: Anvi'o contigs database generated from the isolate genomes and SAGs
         
         Prochlorococcus-ISOLATE-PAN: contains the result of the anvi'o pangenome analysis on ONLY the isolate genomes. 
+        
         Prochloroccocus-PAN: contains the resul of the anvi'o pangenome analysis on all the genomes, isolates AND SAGs. 
+        
         prochlorococcus-bowtie.*: results of the bowtie-build command, which built databases used in mapping the metagenomic reads to the genomes. 
 
 envs/ : contains the .yaml conda environment file necessary to install packages and anything needed to run these analyses
 
-jupyter-notebooks/ : contains final jupyter notebook containing our images and comparisons 
+jupyter-notebooks/ : contains final jupyter notebook containing our images and comparisons and the jupyter notebook used in creating the collections and internal-genomes files. 
 
-logs/  : all .log files generated from slurm scripts we used
+logs/  : all .log files generated from slurm scripts we used. 
 
 output/ : summary files from anvi'o
 
