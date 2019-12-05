@@ -1,0 +1,34 @@
+#! /bin/bash
+
+#SBATCH --partition=compute
+#SBATCH --job-name=metagenome-mapping
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=izhang@mit.edu
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=5000
+#SBATCH --time=20:00:00 
+#SBATCH --output=metagenome-mapping.log
+#export OMP_NUM_THREADS=1
+
+for sample in `awk '{print $1}' Atlantic_samples.txt`
+do
+    if [ "$sample" == "sample" ]; then continue; fi
+    # do the bowtie mapping to get the SAM file:
+    bowtie2 --threads 20 \
+            -x Prochlorococcus-isolates \
+            -1 $sample-QUALITY_PASSED_R1.fastq.gz \
+            -2 $sample-QUALITY_PASSED_R2.fastq.gz \
+            --no-unal \
+            -S $sample.sam
+
+    # covert the resulting SAM file to a BAM file:
+    samtools view -F 4 -bS $sample.sam > $sample-RAW.bam
+
+    # sort and index the BAM file:
+    samtools sort $sample-RAW.bam -o $sample.bam
+    samtools index $sample.bam
+
+    # remove temporary files:
+    rm $sample.sam $sample-RAW.bam
+done
